@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Spinner</string>
+    <string-array name="localidades">
+        <item>Almeria</item>
+        <item>El Ejido</item>
+        <item>Aguadulce</item>
+        <item>Roquetas</item>
+
+    </string-array>
+
+
+    <string name="provinciaSeleccionada">Provincia seleccionada:</string>
+
+
+    <string-array name="provincias">
+        <item>Almeria</item>
+        <item>Granada</item>
+        <item>Malaga</item>
+        <item>Madrid</item>
+
+    </string-array>
+
+</resources>
