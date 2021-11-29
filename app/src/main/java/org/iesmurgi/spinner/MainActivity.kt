@@ -16,8 +16,11 @@ class MainActivity : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
+        //PROVINCIAS
         spinnerProvincias=findViewById<Spinner>(R.id.spinnerProvincias)
-        spinnerLocalidades=findViewById<Spinner>(R.id.spinnerLocalidades)
+
 
         val provincias = resources.getStringArray(R.array.provincias)
         val adaptadorProvincias = ArrayAdapter(this,android.R.layout.simple_spinner_item,provincias)
@@ -35,12 +38,43 @@ class MainActivity : AppCompatActivity(){
                 Toast.makeText(this@MainActivity,getString(R.string.provinciaSeleccionada)+" "+provincias[position],Toast.LENGTH_SHORT).show()
             }
             override fun onNothingSelected(parent: AdapterView<*>?) {
-                Toast.makeText(this@MainActivity,getString(R.string.provinciaSeleccionada)+" ",Toast.LENGTH_SHORT).show()
+
             }
 
         }
 
 
+        spinnerLocalidades=findViewById<Spinner>(R.id.spinnerLocalidades)
 
-    }
+        val localidades = resources.getStringArray(R.array.localidades)
+        val adaptadorLocalidades = ArrayAdapter(this,android.R.layout.simple_spinner_item,localidades)
+
+        spinnerLocalidades.adapter=adaptadorLocalidades
+
+        spinnerLocalidades.onItemSelectedListener=object:
+            AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                Toast.makeText(
+                    this@MainActivity,
+                    getString(R.string.localidadSeleccionada) + " " + localidades[position],
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+
+            }
+
+
+        }
+
+
+        }
+
+
 }

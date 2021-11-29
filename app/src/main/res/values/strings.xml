@@ -10,8 +10,9 @@
 
 
     <string name="provinciaSeleccionada">Provincia seleccionada:</string>
-
-
+    <string name="localidadSeleccionada">Localidad seleccionada:</string>
+    <string name="eligeProvincia">Elige Provincia:</string>
+    <string name="eligeLocalidad">Elige Localidad:</string>
     <string-array name="provincias">
         <item>Almeria</item>
         <item>Granada</item>

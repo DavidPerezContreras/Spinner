@@ -19,35 +19,41 @@
 
             android:background="#333333"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
             <TextView
+                android:textColor="@color/white"
                 android:id="@+id/tvProvincias"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Elige Provincia"
+                android:text="@string/eligeProvincia"
                 android:textSize="30sp"/>
 
             <Spinner
+                android:background="@color/white"
                 android:id="@+id/spinnerProvincias"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
 
                 android:drawSelectorOnTop="true"
-                android:entries="@array/provincias" />
+                android:entries="@array/provincias"/>
+
         </LinearLayout>
 
         <LinearLayout
-
+            android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:gravity="bottom"
             >
 
             <TextView
+
                 android:id="@+id/tvLocalidades"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Elige Localidad"
+                android:text="@string/eligeLocalidad"
                 android:textSize="30sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -55,9 +61,10 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Spinner
+
                 android:id="@+id/spinnerLocalidades"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
 
                 android:drawSelectorOnTop="true"
                 android:entries="@array/localidades" />
